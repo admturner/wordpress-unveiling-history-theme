@@ -1,0 +1,310 @@
+/*   
+Theme Name: Thematic Child Theme for Unveiling History
+Theme URI: 
+Description: Two-column child theme, dark green and rust, developed by Adam Turner and designed by Chris Raymond
+Author: Chris Raymond
+Author URI: http://www.designtank.ws/
+Template: thematic
+Version: 0.2.0
+Tags: Thematic, Childtheme
+.
+Thematic is © Ian Stewart http://themeshaper.com/
+TAH child theme developed by Adam Turner and designed by Chris Raymond (http://www.designtank.ws)
+.
+*/
+
+/* Reset browser defaults */
+@import url('../thematic/library/styles/reset.css');
+
+/* Apply basic typography styles */
+@import url('../thematic/library/styles/typography.css');
+
+/* Apply a basic layout */
+@import url('../thematic/library/layouts/2c-r-fixed.css');
+
+/* Apply basic image styles */
+@import url('../thematic/library/styles/images.css');
+
+/* Apply default theme styles and colors */
+/* It's better to actually copy over default.css into this file (or link to a copy in your child theme) if you're going to do anything outrageous */
+@import url('../thematic/library/styles/default.css');
+
+/* Prepare theme for plugins */
+@import url('../thematic/library/styles/plugins.css');
+
+/* import styles for MyCalendar */
+@import url('myCalendar.css');
+
+/* CUSTOM CSS FOR THIS CHILD THEME */
+
+/* =Global Elements
+-------------------------------------------------------------- */
+body, input, textarea {
+    font: 16px Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    line-height:24px; color: #232e27;}
+
+h1, h2, h3, h4, h5, h6 {clear:none;line-height:1.5;margin:1em 0 .25em;padding:0;}
+	#splash-schedule h2 {margin-top:12px;}
+h1, h3, h1.entry-title, h1.page-title {font-family:Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;}
+h1 {font-size:30px;} 
+	.singular h1, .entry-content h3 {font-weight:normal; color:#721;margin-top:0;}
+	
+h1.entry-title, .singular h1.entry-title {font-style:italic;font-size:24px;} 
+.archive h1.page-title {font-size:21px;padding-bottom:24px;font-style:italic;color:#721;}
+
+h2 {font-size:24px;font-family: 'Arial Narrow', Arial, sans-serif;} 
+h4, h5, h6 {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.entry-content h4{margin-top:3px;}
+
+h3, .aside h3  {font-size:19px;font-weight:bold;} 
+	.entry-content h3{margin-top:0;padding-top:18px;padding-bottom:0px;font-size:24px;}
+
+h4, h5, h6 {font-size:14px; font-weight:bold;}
+
+p, ul, ol, dd, pre {margin-bottom:24px;}
+p {line-height:1.5;}
+
+ul, .aside ul ul {list-style:none;margin:0 0 18px 0px;}
+
+ul li {line-height:1.53846;margin-bottom:5px;font-size:13px;}
+.aside ul, #primary ul, #secondary ul {font-family: "Helvetica Neue", Helvetica, Arial,  sans-serif;}
+
+/* added: 2011-07-22 by ACT to indent ul ul on cohort splash page assignments list */
+#splash-assignments ul ul {margin: 0 0 15px 10px;}
+
+a:link, .aside a:link {color:#721;text-decoration:none;font-weight:bold;}
+
+a:visited, .aside a:visited {color:#710;text-decoration:none;}
+.aside ul li a {font-weight:bold;}
+h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {color:#232E27;}
+/*h4.meta, h4.meta a, h4.meta a:visited {color:#721;}*/
+h1 a:hover, h2 a:hover, h3 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, a:hover, a:active, .aside a:hover, .aside a:active, 
+.entry-meta a:hover, .entry-meta a:active, .entry-utility a:hover, .entry-utility a:active, 
+.entry-title a:active, .entry-title a:hover, .navigation a:active, .navigation a:hover  
+{color: #676;text-decoration:underline;}
+
+#front-page #featured a:visited {color:#721;}
+#front-page #header ul.menu a:visited, #front-page #footer a:visited {color:white;} #front-page #footer #siteinfo a:visited {color:black;}
+
+.clearer {clear:both;}
+.hide-text {text-indent:-9999px}
+
+a.read_more, .more {font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:10px; text-transform:uppercase;}
+
+.cta-button {display:block; clear:both;width:140px;height:35px;background: transparent url(../../../wp-content/uploads/btn-apply.png) no-repeat;} 
+
+.singular .main-aside ul {padding:0;list-style-type:none;}
+.singular .aside ul ul {list-style-type:none;margin:0 0 12px 0px;}
+
+.aside {color:#676;}
+.aside ul ul, .main-aside ul ul {font-size:14px;}
+
+.sans-serif {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.alert {margin:12px;background:#721;color:white;padding:6px 0px;font-weight:bold;font-family:"Helvetica Neue", Helvetica, Arial,  sans-serif; font-size:12px;text-align:center}
+
+/* =Front page
+------------------------------------------------------------  */
+#front-page #content, #front-page #container {width:960px;} #front-page #content {margin:0 0px; padding:0} #front-page #container {padding-top:0; margin-top:0;}
+#front-page #primary-wrap {height:338px; overflow:hidden;
+    background: transparent url(../../../wp-content/uploads/bg-primary-home_940w.png) 10px 0px no-repeat;margin-bottom:0px;}#front-page #main {padding:0 0px 10px 0;width:960px; background:none;margin:0px 0;}
+
+
+#front-page #featured {float:left; width:350px;margin:32px 30px 0 30px;overflow:hidden;} #front-page h1 a, #front-page h2 a, #front-page #sections a, #front-page #sections a:visited {color:#721;} #front-page #sections a:hover {color:#676;}
+#front-page #calendar {float:left; width:505px;padding:0 0px 0 25px;}
+	#front-page #calendar h2#upcoming {display:block;margin:0px;height:64px;
+		background: transparent url(../../../wp-content/uploads/head-bg-comingup.gif) 51% 24px no-repeat;}
+		
+	#front-page #calendar ul {margin-left:0;width:160px; float:left;margin-right:8px;} 
+		#front-page #calendar li {font-size:13px;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;line-height:20px;} 
+		#front-page #calendar ul li h3 {font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;font-size:14px;color:#676; font-weight:bold;text-transform:uppercase;line-height:1.25;}
+		#front-page #calendar li.register {text-transform:uppercase;font-size:10px; font-weight:bold;line-height:14px;margin-top:4px;} #front-page #calendar li.no-events{font-size:14px; line-height:16px; margin-bottom:8px;font-style:italic;}
+		
+		span.cal-title, p.cal-title{font-size:15px;color:#283b2b;font-weight:bold;} 
+		span.cal-date, p.cal-date {color: #721; font-weight:bold;font-size:14px;} 
+		span.cal-place, p.cal-place {text-transform:uppercase;line-height:24px;font-size:12px;}
+		span.cal-shortdesc, p.cal-shortdesc {font-style:italic;font-size:14px;line-height:1.5;}
+		span.cal-time. p.cal-time {font-size:14px;}
+		
+		#front-page #calendar #button-wrap{clear:both;margin-left:186px;}
+				
+#front-page .entry-content {border:none;margin-top:0px;padding-top:5px}
+
+#sections{padding:0 0 20px;background-color: #fff;overflow:hidden;margin:0 0 0 10px;width:940px;float:left;}
+	#sections h2 {display:block;width:190px;height:35px;margin-bottom:3px;}
+	#sections h4 {margin-top:9px;line-height:1.25;font-size:14px;}
+		h2#PSAs {background: transparent url(../../../wp-content/uploads/head-bg-PSA.gif) no-repeat;}
+		h2#Pods {background: transparent url(../../../wp-content/uploads/head-bg-podcast.gif) no-repeat;}
+		h2#Lessons {background: transparent url(../../../wp-content/uploads/head-bg-lessons.gif) no-repeat;}
+		h2#Resources {background: transparent url(../../../wp-content/uploads/head-bg-resources.gif) no-repeat;}
+	#sections .one-fourth {width:210px;float:left;margin:0 10px;} #sections .last {margin-right:0}
+		#sections .one-fourth p {margin-bottom:9px;} 
+
+	/* =entry */
+	#front-page .entry-content img {float:left; margin-top:0;margin-right:14px;}
+	#front-page .entry-content h2, #front-page .entry-content p {margin: 0 0 0 12px; padding:0;}
+
+/* =Structural
+-------------------------------------------------------------- */
+body {background: #f9fcf0; min-width:960px;}
+body#front-page {background: #f3f6ea url(../../../wp-content/uploads/bg-body-115y.gif) repeat-x 0 0px; }
+#wrapper {width:960px;margin:0 auto;}
+
+.singular #main, .archive #main {width:940px; margin: 0px 10px 10px; background: #fff url(../../../wp-content/uploads/bg-main-940w.png) left top no-repeat;padding-top:48px;}
+.singular #container {width:620px;}
+.singular #content {width:600px;}
+.single #content, .singular #content {padding-left:20px;padding-top:20px;}
+.singular #primary {width:240px;margin-left:60px;border:none;padding:24px 0;}
+ .archive #primary {float:left;margin-left:60px;width:240px;}
+#primary {border:0px;}
+
+/* =Header
+-------------------------------------------------------------- */
+
+#header {width:960px;
+    z-index:2; height:115px; margin:0;background-color:#f9fcf0;
+}
+#branding {
+    padding:10px 0 0px 10px; width:430px; height:105px; float:left;
+}
+#blog-title {
+    font-family:Arial,sans-serif;
+    font-size:34px;
+    font-weight:bold;
+    line-height:40px;
+}
+#blog-title a {
+    color:#000; text-decoration:none;display:block; height:97px; width:127px; text-indent:-9999px;
+	background: transparent url(../../../wp-content/uploads/header-logo.gif) top left no-repeat;
+}
+
+#blog-title a:active,
+#blog-title a:hover {
+    color: #ff4b33;
+}
+#blog-description {
+    color:#666;
+    font-size:13px;
+    font-style:italic;text-indent:-9999px;
+}
+
+
+	/* =Menu
+	-------------------------------------------------------------- */
+
+	.skip-link {
+	    display:none;
+	}
+	#access {width:520px;float:left;
+	    border-bottom:none;
+	    height:;
+	    font-size:13px;
+	    overflow:visible;
+	    z-index:100;
+	}
+
+	#header ul li {font-family: Arial Narrow, Arial, sans-serif;font-size:15px; line-height:1.25;font-weight:bold;margin-bottom:5px;} 
+	#public-pages, #cohort-pages {float:left;height:105px;} 
+	#public-pages ul {width:250px;}
+	#public-pages ul li a, #front-page #header ul#menu-primary-public-pages a:visited {color:#455548} 
+	ul#menu-primary-public-pages {visibility:hidden;} /*until we can figure out how to resolve Thematic displaying cohort menu twice if remove public page menu from theme 1.14.11*/
+	#public-pages ul, #cohort-pages ul {padding:10px 0 0 0;}
+	#cohort-pages ul {width:260px;height:105px;background-color:#677469;}
+	#cohort-pages li {margin-left:10px;} 
+	#cohort-pages a {color:#fff;} 
+	#cohort-pages li.current_page_item, #public-pages li.current_page_item, ul#menu-participant-splash-pages li#menu-item-8 {border-left: 5px solid #942; padding-left:5px;margin-left:0px;} /*a litle trick b/c thematic menus don't seem to add class of current_page_item 2.4.11*/
+	#front-page ul#menu-participant-splash-pages li {border-left:none;padding-left:10px;}
+	#public-pages li.current_page_item {margin-left:-9px;}
+
+/*=Footer*/
+#footer {border-top:0;width:940px;background:#677469;
+	margin:-10px 10px 24px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-right-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	-webkit-box-shadow: 0px 3px 3px #555;
+	-moz-box-shadow: 0px 3px 3px #555;
+	box-shadow: 0px 3px 3px #555;
+	behavior:url(PIE.htc);}
+	
+#footer #first, #footer #second, #footer #third {float:left;margin:0 20px 0px 0px;} 
+	#footer #first {width:210px;} 	
+	#footer #second {margin-right:30px;width:410px;}
+	#footer #third {width:200px;margin-right:0;}
+		.singular #footer #third, .archive #footer #third {margin-left:450px;}
+		#front-page #footer #third {margin:0 20px 0px 0px;}
+#footer h3 {margin-top:0;}
+#footer p, #footer ul li, #footer h2, #footer h3, #footer a:link, #footer a:visited, #siteinfo {color:#fff;font-family:Arial, sans-serif;font-weight:normal;} 
+#footer ul li, #footer p {font-size:14px;line-height:22px;}
+#footer ul {list-style:none;} #footer #subsidiary {padding-left:10px;}
+	#subsidiary{padding-top:10px;}
+	#siteinfo{text-align:left; text-indent:10px;color:#000;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;padding:18px 0 15px;} 
+		#siteinfo a:link, #siteinfo a:visited {color:#000;}
+
+
+/* =entry */
+.hentry {padding:0;overflow:hidden;} 
+.singular .entry-content {margin-top:18px;padding-top:15px;} 
+.single .entry-content {border-top:0;margin-top:3px;float:left;margin-left:20px;width:400px;}
+.entry-content {margin:0 0 11px;padding:0;}
+.entry-content p {overflow:hidden;}
+.entry-content img {float:left;margin:0 24px 24px 0;}
+.entry-meta, .entry-utility {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;} 
+.entry-meta {margin-bottom:3px;padding-left:1px;}
+.single .entry-meta{display:block; float:left; width:140px;margin:24px 10px 0 0;}
+
+.entry-content h3{border-top:1px solid #676;font-weight:normal; color:#676;margin-top:0;padding-top:6px;padding-bottom:0px;font-size:18px;padding-left:6px;border-left:4px solid #676;}
+.entry-content h4{margin-top:3px;}
+.entry-utility {margin-bottom:18px;clear:both;}	
+
+.recent-post{margin:12px 0 6px;border-bottom:1px dotted #666;} .recent-post h4{margin-top:-9px;margin-bottom:6px;}
+/*admin visibles */
+.edit-link {float:right; margin-right:20px}
+/* MISC */
+.avatar {border:1px solid #676;display:block; margin:6px 12px 3px 0;}
+.navigation {font-size:16px;}
+#nav-below {margin-bottom:10px;}
+	.nav-previous {float:left;}
+	.nav-next {float:right;}
+/* Tables */
+.table, .table tr {border-color: #E7EBDC;}
+.table th {text-align:center;background:#F9FCF0} 
+/* =comments */
+#comments {padding-top:10px;}
+	#respond {padding-top:5px;}
+	/* ==href attributes   */
+	/* provide all selectors the same background image, attribute selector finds href ending in a specific extension
+	---------------------------------------- */
+	a[rel="external"],
+	a[href$="ppt"],
+	a[href$="pdf"],
+	a[href$="doc"],
+	a[href$="flipchart"],
+	a[href$="mp3"] {
+		padding-left:22px; background:url('images/bg_file-icons.png') no-repeat 0 0;
+		}
+
+	/* position the y-coordinate of the sprite image for each file type
+	---------------------------------------- */
+	a[rel="external"]{background-position: 2px 0px;}
+	a[href$="ppt"]{background-position: 2px -53px;}
+	a[href$="pdf"]{background-position: 2px -103px;}
+	a[href$="doc"]{background-position: 2px -153px;}
+	a[href$="flipchart"]{background-position: 2px -203px;}
+	a[href$="mp3"]{background-position: 2px -253px;}
+
+	/* insert parenthetical file info after the link
+	---------------------------------------- */
+	a[href$=".ppt"]:after{content: "(Powerpoint)"; color:#283b2b; font-size:10px; margin-left:3px;}
+	a[href$=".pdf"]:after{content: "(PDF)"; color:#283b2b; font-size:10px; margin-left:3px;}
+	a[href$=".doc"]:after{content: "(Word)"; color:#283b2b; font-size:10px; margin-left:3px;}
+	a[href$=".flipchart"]:after{content: "(Flipchart)"; color:#283b2b; font-size:10px; margin-left:3px;}
+	a[href$=".mp3"]:after{content: "(mp3 audio)"; color:#283b2b; font-size:10px; margin-left:3px;}
